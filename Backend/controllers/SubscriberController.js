@@ -28,7 +28,7 @@ export const createSubscriber = async (req, res) => {
     );
 
     // Confirm Email to User
-    const confirmUrl = `${API_BASE}/api/Subscriber/confirm?token=${token}`;
+    const confirmUrl = `${API_BASE}/api/subscriber/confirm?token=${token}`;
 
     await sendMail(
       "Confirm your subscription - JhaTech Solution",
