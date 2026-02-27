@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* Design 2 ke exact colors */
+  --color-brand-dark: #020617;
+  --color-brand-primary: #1d4ed8;
+  --color-brand-light: #60a5fa;
+  
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Animation for CEO image */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+:root {
+  background-color: #020617;
+  color: white;
+  font-family: var(--font-poppins);
+}
+
+@layer components {
+  /* Floating Capsule Navbar Effect */
+  .glass-nav {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Text Glow for 'Solution' */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+
+  /* Background Glow Spot */
+  .bg-glow-main {
+    background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+  }
+}
